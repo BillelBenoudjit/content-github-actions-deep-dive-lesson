@@ -80,7 +80,7 @@ jobs:
           aws lambda create-function --function-name test_python_checker \
           --code S3Bucket=github-actions-deep-dive,S3Key=${{ github.repository }}/${{ github.sha }}.zip \
           --handler lambda_function.lambda_handler --runtime python3.9 \
-          --role arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/python_checker-role-n5lit80f 
+          --role arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/lambda_python_checker 
       - name: Wait 30 seconds
         run: sleep 30
       - name: Destroy test function
