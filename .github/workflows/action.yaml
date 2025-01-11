@@ -62,7 +62,7 @@ jobs:
         run: |
           aws lambda update-function-code \
           --function-name python_checker \
-          --s3-bucket s3://github-actions-deep-dive/BillelBenoudjit/content-github-actions-deep-dive-lesson \
+          --s3-bucket s3://github-actions-deep-dive \
           --s3-key ${{ github.sha }}.zip \
           --publish
           
