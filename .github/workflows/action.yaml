@@ -63,6 +63,6 @@ jobs:
           aws lambda update-function-code \
           --function-name python_checker \
           --s3-bucket github-actions-deep-dive \
-          --s3-key ${{ github.sha }}.zip \
+          --s3-key ${{ github.repository }}/${{ github.sha }}.zip \
           --publish
           
